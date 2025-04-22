@@ -20,7 +20,8 @@ header{
    background-color: #AAF1FF;
    width: 100%;
    height: 70px;
-   margin-bottom:20px; 
+   margin-bottom:20px;
+   justify-content: space-between; 
 }
 
 nav{
@@ -32,10 +33,21 @@ nav{
    align-items: center;
 }
 
+
+
 a{
    text-decoration: none;
    color: #0F214D;
 }
+
+/* Burger Icon */
+.burger-icon {
+   display: none; /* Hidden by default */
+   font-size: 1.5rem;
+   cursor: pointer;
+   color: #03624C;
+}
+
 
 nav a:hover{
    background-color: #0F214D;
@@ -265,14 +277,14 @@ input[type="search"] {
 
 .intro{
    width: 100%;
-   height: 80vh;
+   height: 80%;
    display: flex;
    padding: 30px 40px 0px 40px;
    gap: 10px;
 }
 
 .textintro{
-   width: 50%;
+   width: 90%;
    height: 400px;
    display: flex;
    flex-direction: column;
@@ -280,11 +292,17 @@ input[type="search"] {
    background-color: #2ba2ec44;
    padding: 50px;
    border-radius: 5px;
+  
+}
+.textintro p{
+   text-align: justify;
+
 }
 
-.imageintro{
-   width: 50%;
-   height: 400px;
+.imageintro img{
+   width: 81%;
+   height: 100%;
+   /* height: 0%; */
 }
 
 .container{
@@ -293,8 +311,8 @@ justify-content: center;
 }
 
 img{
-   width: 580px;
-   height: 400px;
+   width: 60%;
+   height: auto;
    border-radius: 5px;
 }
 
@@ -304,6 +322,7 @@ img{
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
+   margin-top: 50px;
 }
 
 .card{
@@ -322,7 +341,8 @@ img{
 
 .card p{
    margin: 5px;
-   padding: 10px;
+   padding: 5px;
+   text-align: justify;
 }
 
 .card h2{
@@ -332,8 +352,8 @@ img{
 }
 
 .image{
-   width: 280px;
-   height: 180px;
+   width: 100%;
+   height: auto;
    border-radius: 10px;
 }
 
@@ -388,7 +408,7 @@ h3{
 }
 
 .ex1{
-   width: 60%;
+   width: 80%;
 }
 
 .ex2{
@@ -407,18 +427,18 @@ h3{
    width: 60%;
    margin: 50px;
 }
-
 .re2{
-   align-items: center;
-   display: flex;
-   flex-wrap: wrap;
-   gap: 30px;
+    width: 70%;
    margin: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+   flex-wrap: wrap;
 }
-
 .iframe{
-   width: 300px;
-   height: 200px;
+   width: 100%;
+   height: auto;
 }
 
 .team{
@@ -448,6 +468,81 @@ h3{
 .cont-course{
    justify-self: center;
    width: 70%;
+}
+.iframe{
+   width: 40%;
+   height: 200px;
+
+}
+#submit{
+   width: 500px;
+   height: 100px;
+}
+
+@media screen and (max-width: 768px){
+   .burger-icon {
+      display: block; /* Show burger icon */
+      position: absolute;
+      right: 10px;
+      top: 10px;
+  }
+
+   nav {
+      display: none; /* Hide menu links by default */
+      position: absolute;
+      top: 70px; /* Adjust based on header height */
+      right: 10px;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      flex-direction: column;
+      z-index: 1000;
+      width: 200px;
+   }
+
+   nav.active {
+      display: flex; /* Show menu when active */
+   }
+
+   input[type="search"] {
+      width: 90%; /* Adjust width to fit smaller screens */
+   }
+
+   .iframe {
+      height: 150px; /* Adjust height for smaller screens */
+   }
+
+   .intro {
+      flex-direction: column; /* Stack content vertically */
+      padding: 10px;
+   }
+
+   .textintro, .imageintro img {
+      width: 100%; /* Full width on smaller screens */
+      height: auto;
+   }
+
+   .footer {
+      flex-direction: column; /* Stack footer items vertically */
+      align-items: center;
+      text-align: center;
+      height: auto; /* Adjust height */
+      padding: 20px;
+   }
+
+   .foot1, .foot2 {
+      margin: 10px 0;
+   }
+
+   .cont-course, .course {
+      width: 90%; /* Adjust width for smaller screens */
+      margin: 0 auto; /* Center content */
+   }
+
+   .card {
+      width: 90%; /* Adjust card width */
+      margin: 10px auto; /* Center cards */
+   }
 }
 
 
