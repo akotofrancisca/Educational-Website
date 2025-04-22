@@ -36,9 +36,5 @@ document.addEventListener('click', function (event) {
         !menuContainer.contains(event.target) // Click is not inside the menu container
     ) {
         menuContainer.style.display = 'none'; // Hide the menu
-    }
+}
 });
-
-// iconClose.addEventListener('click', ()=> {
-//     wrapper.classList.remove('active-popup');
-// });
